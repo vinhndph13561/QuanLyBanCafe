@@ -5,20 +5,29 @@
  */
 package GUI;
 
+import javax.swing.JPanel;
 /**
  *
  * @author Admin
  */
 public class Main extends javax.swing.JFrame {
-
+    private JPanel panel;
     /**
      * Creates new form Main
      */
     public Main() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.showPanel(new TrangChu_Panel());
+        this.setSize(1175, 831);
     }
 
+    public void showPanel(JPanel pnl){
+        this.panel = pnl;
+        this.pnlShow.removeAll();
+        this.pnlShow.add(this.panel);
+        this.pnlShow.validate();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -51,10 +60,11 @@ public class Main extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cửa hàng Coffee");
         setBackground(new java.awt.Color(219, 147, 7));
-        setPreferredSize(new java.awt.Dimension(400, 865));
+        setPreferredSize(new java.awt.Dimension(1175, 865));
 
         pnlTong.setBackground(new java.awt.Color(219, 147, 7));
         pnlTong.setPreferredSize(new java.awt.Dimension(462, 858));
+        pnlTong.setLayout(new javax.swing.BoxLayout(pnlTong, javax.swing.BoxLayout.LINE_AXIS));
 
         pnlMenu.setBackground(new java.awt.Color(87, 67, 3));
         pnlMenu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(246, 209, 30)));
@@ -285,42 +295,18 @@ public class Main extends javax.swing.JFrame {
                 .addGap(210, 210, 210))
         );
 
+        pnlTong.add(pnlMenu);
+
         pnlShow.setBackground(new java.awt.Color(219, 147, 7));
-
-        javax.swing.GroupLayout pnlShowLayout = new javax.swing.GroupLayout(pnlShow);
-        pnlShow.setLayout(pnlShowLayout);
-        pnlShowLayout.setHorizontalGroup(
-            pnlShowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 667, Short.MAX_VALUE)
-        );
-        pnlShowLayout.setVerticalGroup(
-            pnlShowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout pnlTongLayout = new javax.swing.GroupLayout(pnlTong);
-        pnlTong.setLayout(pnlTongLayout);
-        pnlTongLayout.setHorizontalGroup(
-            pnlTongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlTongLayout.createSequentialGroup()
-                .addComponent(pnlMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnlShow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        pnlTongLayout.setVerticalGroup(
-            pnlTongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlTongLayout.createSequentialGroup()
-                .addGroup(pnlTongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(pnlShow, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnlMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 831, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        pnlShow.setPreferredSize(new java.awt.Dimension(900, 831));
+        pnlShow.setLayout(new java.awt.BorderLayout());
+        pnlTong.add(pnlShow);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlTong, javax.swing.GroupLayout.DEFAULT_SIZE, 952, Short.MAX_VALUE)
+            .addComponent(pnlTong, javax.swing.GroupLayout.PREFERRED_SIZE, 1182, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
