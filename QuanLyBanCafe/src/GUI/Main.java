@@ -19,7 +19,7 @@ public class Main extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         this.showPanel(new TrangChu_Panel());
-        this.setSize(1175, 831);
+        this.setSize(1175, 850);
     }
 
     public void showPanel(JPanel pnl){
