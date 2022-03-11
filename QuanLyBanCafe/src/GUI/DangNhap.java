@@ -9,7 +9,11 @@ package GUI;
  *
  * @author vinhn
  */
+import Helper.Auth;
+import Dao.NhanVienDAO;
+import Entity.NhanVien;
 import javax.swing.JOptionPane;
+
 public class DangNhap extends javax.swing.JFrame {
 
     /**
@@ -20,7 +24,7 @@ public class DangNhap extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
     }
-    //NhanVienDAO dao = new NhanVienDAO();
+    NhanVienDAO dao = new NhanVienDAO();
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -170,7 +174,7 @@ public class DangNhap extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDangNhapMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDangNhapMouseClicked
-       // DangNhap;
+      dangNhap();
     }//GEN-LAST:event_btnDangNhapMouseClicked
 
     private void lblQUenMatKhauMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblQUenMatKhauMouseClicked
@@ -228,20 +232,20 @@ public class DangNhap extends javax.swing.JFrame {
     private javax.swing.JTextField txtMatKhau;
     private javax.swing.JTextField txtTenDangNhap;
     // End of variables declaration//GEN-END:variables
-// private void dangNhap() {
-//    String manv = txtTenDangNhap.getText();
-//         String matKhau = new String (txtMatKhau.getPassword());
-//         NhanVien nhanVien = dao.selectByAccount(manv);
-//         if(nhanVien == null){
-//            JOptionPane.showMessageDialog(this, " Sai tên đăng nhập");
-//         }
-//         else if(!matKhau.equals(nhanVien.getPass())){
-//             JOptionPane.showMessageDialog(this, " Sai mật khẩu");
-//         }
-//         else{
-//             Auth.user = nhanVien;
-//             //JOptionPane.showMessageDialog(this, " Đăng nhập thành công");
-//             this.dispose();
-//         }    
-//    }
+ private void dangNhap() {
+    String manv = txtTenDangNhap.getText();
+         String matKhau = new String (txtMatKhau.getText());
+         NhanVien nhanVien = dao.selectByAccount(manv);
+         if(nhanVien == null){
+            JOptionPane.showMessageDialog(this, " Sai tên đăng nhập");
+         }
+         else if(!matKhau.equals(nhanVien.getPass())){
+             JOptionPane.showMessageDialog(this, " Sai mật khẩu");
+         }
+         else{
+             Auth.user = nhanVien;
+             JOptionPane.showMessageDialog(this, " Đăng nhập thành công");
+             this.dispose();
+         }    
+    }
 }
