@@ -7,7 +7,7 @@ package Entity;
 
 /**
  *
- * @author vinhn
+ * @author Admin
  */
 public class NhanVien {
     
