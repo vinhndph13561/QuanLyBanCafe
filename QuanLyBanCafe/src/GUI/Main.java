@@ -11,23 +11,26 @@ import javax.swing.JPanel;
  * @author Admin
  */
 public class Main extends javax.swing.JFrame {
+
     private JPanel panel;
+
     /**
      * Creates new form Main
      */
     public Main() {
         initComponents();
-        this.setLocationRelativeTo(null);
         this.showPanel(new TrangChu_Panel());
-        this.setSize(1175, 850);
+        this.setSize(1495, 850);
+        this.setLocationRelativeTo(null);
     }
 
-    public void showPanel(JPanel pnl){
+    public void showPanel(JPanel pnl) {
         this.panel = pnl;
         this.pnlShow.removeAll();
         this.pnlShow.add(this.panel);
         this.pnlShow.validate();
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -64,7 +67,6 @@ public class Main extends javax.swing.JFrame {
 
         pnlTong.setBackground(new java.awt.Color(219, 147, 7));
         pnlTong.setPreferredSize(new java.awt.Dimension(462, 858));
-        pnlTong.setLayout(new javax.swing.BoxLayout(pnlTong, javax.swing.BoxLayout.LINE_AXIS));
 
         pnlMenu.setBackground(new java.awt.Color(87, 67, 3));
         pnlMenu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(246, 209, 30)));
@@ -80,6 +82,11 @@ public class Main extends javax.swing.JFrame {
         pnlTrangChu.setBackground(new java.awt.Color(70, 54, 3));
         pnlTrangChu.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         pnlTrangChu.setPreferredSize(new java.awt.Dimension(0, 90));
+        pnlTrangChu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlTrangChuMouseClicked(evt);
+            }
+        });
 
         lblTrangChu.setBackground(new java.awt.Color(255, 255, 255));
         lblTrangChu.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
@@ -91,7 +98,7 @@ public class Main extends javax.swing.JFrame {
         pnlTrangChu.setLayout(pnlTrangChuLayout);
         pnlTrangChuLayout.setHorizontalGroup(
             pnlTrangChuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblTrangChu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
+            .addComponent(lblTrangChu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 259, Short.MAX_VALUE)
         );
         pnlTrangChuLayout.setVerticalGroup(
             pnlTrangChuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,6 +111,11 @@ public class Main extends javax.swing.JFrame {
         pnlBanHang.setBackground(new java.awt.Color(70, 54, 3));
         pnlBanHang.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         pnlBanHang.setPreferredSize(new java.awt.Dimension(0, 90));
+        pnlBanHang.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlBanHangMouseClicked(evt);
+            }
+        });
 
         lblBanHang.setBackground(new java.awt.Color(255, 255, 255));
         lblBanHang.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
@@ -129,6 +141,11 @@ public class Main extends javax.swing.JFrame {
         pnlSanPham.setBackground(new java.awt.Color(70, 54, 3));
         pnlSanPham.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         pnlSanPham.setPreferredSize(new java.awt.Dimension(0, 90));
+        pnlSanPham.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlSanPhamMouseClicked(evt);
+            }
+        });
 
         lblSanPham.setBackground(new java.awt.Color(255, 255, 255));
         lblSanPham.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
@@ -154,6 +171,11 @@ public class Main extends javax.swing.JFrame {
         pnlHoaDon.setBackground(new java.awt.Color(70, 54, 3));
         pnlHoaDon.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         pnlHoaDon.setPreferredSize(new java.awt.Dimension(0, 90));
+        pnlHoaDon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlHoaDonMouseClicked(evt);
+            }
+        });
 
         lblHoaDon.setBackground(new java.awt.Color(255, 255, 255));
         lblHoaDon.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
@@ -178,6 +200,11 @@ public class Main extends javax.swing.JFrame {
         pnlGiamGia.setBackground(new java.awt.Color(70, 54, 3));
         pnlGiamGia.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         pnlGiamGia.setPreferredSize(new java.awt.Dimension(0, 90));
+        pnlGiamGia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlGiamGiaMouseClicked(evt);
+            }
+        });
 
         lblGiamGia.setBackground(new java.awt.Color(255, 255, 255));
         lblGiamGia.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
@@ -202,6 +229,11 @@ public class Main extends javax.swing.JFrame {
         pnlNhanVien.setBackground(new java.awt.Color(70, 54, 3));
         pnlNhanVien.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         pnlNhanVien.setPreferredSize(new java.awt.Dimension(0, 90));
+        pnlNhanVien.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlNhanVienMouseClicked(evt);
+            }
+        });
 
         lblNhanVien.setBackground(new java.awt.Color(255, 255, 255));
         lblNhanVien.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
@@ -226,6 +258,11 @@ public class Main extends javax.swing.JFrame {
         pnlThongKe.setBackground(new java.awt.Color(70, 54, 3));
         pnlThongKe.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         pnlThongKe.setPreferredSize(new java.awt.Dimension(0, 90));
+        pnlThongKe.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlThongKeMouseClicked(evt);
+            }
+        });
 
         lblThongKe.setBackground(new java.awt.Color(255, 255, 255));
         lblThongKe.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
@@ -251,13 +288,13 @@ public class Main extends javax.swing.JFrame {
         pnlChucNang.setLayout(pnlChucNangLayout);
         pnlChucNangLayout.setHorizontalGroup(
             pnlChucNangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlHoaDon, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
-            .addComponent(pnlBanHang, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
-            .addComponent(pnlTrangChu, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
-            .addComponent(pnlGiamGia, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
-            .addComponent(pnlNhanVien, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
-            .addComponent(pnlThongKe, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
-            .addComponent(pnlSanPham, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
+            .addComponent(pnlHoaDon, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
+            .addComponent(pnlBanHang, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
+            .addComponent(pnlTrangChu, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
+            .addComponent(pnlGiamGia, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
+            .addComponent(pnlNhanVien, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
+            .addComponent(pnlThongKe, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
+            .addComponent(pnlSanPham, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
         );
         pnlChucNangLayout.setVerticalGroup(
             pnlChucNangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -284,7 +321,7 @@ public class Main extends javax.swing.JFrame {
         pnlMenuLayout.setHorizontalGroup(
             pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblCoffee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(pnlChucNang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlChucNang, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
         );
         pnlMenuLayout.setVerticalGroup(
             pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -295,18 +332,30 @@ public class Main extends javax.swing.JFrame {
                 .addGap(210, 210, 210))
         );
 
-        pnlTong.add(pnlMenu);
-
         pnlShow.setBackground(new java.awt.Color(219, 147, 7));
-        pnlShow.setPreferredSize(new java.awt.Dimension(900, 831));
+        pnlShow.setPreferredSize(new java.awt.Dimension(1200, 831));
         pnlShow.setLayout(new java.awt.BorderLayout());
-        pnlTong.add(pnlShow);
+
+        javax.swing.GroupLayout pnlTongLayout = new javax.swing.GroupLayout(pnlTong);
+        pnlTong.setLayout(pnlTongLayout);
+        pnlTongLayout.setHorizontalGroup(
+            pnlTongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlTongLayout.createSequentialGroup()
+                .addComponent(pnlMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnlShow, javax.swing.GroupLayout.DEFAULT_SIZE, 1203, Short.MAX_VALUE))
+        );
+        pnlTongLayout.setVerticalGroup(
+            pnlTongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 831, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(pnlShow, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlTong, javax.swing.GroupLayout.PREFERRED_SIZE, 1182, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(pnlTong, javax.swing.GroupLayout.DEFAULT_SIZE, 1477, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -315,6 +364,35 @@ public class Main extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void pnlTrangChuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlTrangChuMouseClicked
+        this.showPanel(new TrangChu_Panel());
+    }//GEN-LAST:event_pnlTrangChuMouseClicked
+
+    private void pnlBanHangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBanHangMouseClicked
+        this.showPanel(new TrangChu_Panel());
+    }//GEN-LAST:event_pnlBanHangMouseClicked
+
+    private void pnlSanPhamMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlSanPhamMouseClicked
+        this.showPanel(new TrangChu_Panel());
+    }//GEN-LAST:event_pnlSanPhamMouseClicked
+
+    private void pnlHoaDonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlHoaDonMouseClicked
+        this.showPanel(new TrangChu_Panel());
+    }//GEN-LAST:event_pnlHoaDonMouseClicked
+
+    private void pnlGiamGiaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlGiamGiaMouseClicked
+        this.showPanel(new TrangChu_Panel());
+    }//GEN-LAST:event_pnlGiamGiaMouseClicked
+
+    private void pnlNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlNhanVienMouseClicked
+        QL_NhanVien_Panel pnl = new QL_NhanVien_Panel();
+        this.showPanel(pnl);
+    }//GEN-LAST:event_pnlNhanVienMouseClicked
+
+    private void pnlThongKeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlThongKeMouseClicked
+        this.showPanel(new TrangChu_Panel());
+    }//GEN-LAST:event_pnlThongKeMouseClicked
 
     /**
      * @param args the command line arguments

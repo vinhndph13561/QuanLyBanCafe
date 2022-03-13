@@ -16,6 +16,7 @@ public class TrangChu_Panel extends javax.swing.JPanel {
      */
     public TrangChu_Panel() {
         initComponents();
+        this.setSize(900, 831);
     }
 
     /**
@@ -34,34 +35,22 @@ public class TrangChu_Panel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(900, 831));
 
         pnlNen.setBackground(new java.awt.Color(219, 147, 7));
-        pnlNen.setPreferredSize(new java.awt.Dimension(900, 832));
+        pnlNen.setPreferredSize(new java.awt.Dimension(1200, 831));
+        pnlNen.setLayout(null);
 
         lblCoffee.setFont(new java.awt.Font("VNI-Commerce", 0, 72)); // NOI18N
         lblCoffee.setForeground(new java.awt.Color(255, 255, 255));
         lblCoffee.setText("Coffee ABC");
-
-        javax.swing.GroupLayout pnlNenLayout = new javax.swing.GroupLayout(pnlNen);
-        pnlNen.setLayout(pnlNenLayout);
-        pnlNenLayout.setHorizontalGroup(
-            pnlNenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlNenLayout.createSequentialGroup()
-                .addContainerGap(317, Short.MAX_VALUE)
-                .addComponent(lblCoffee, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(283, 283, 283))
-        );
-        pnlNenLayout.setVerticalGroup(
-            pnlNenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlNenLayout.createSequentialGroup()
-                .addGap(340, 340, 340)
-                .addComponent(lblCoffee)
-                .addContainerGap(389, Short.MAX_VALUE))
-        );
+        pnlNen.add(lblCoffee);
+        lblCoffee.setBounds(420, 330, 355, 103);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlNen, javax.swing.GroupLayout.DEFAULT_SIZE, 955, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(pnlNen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
