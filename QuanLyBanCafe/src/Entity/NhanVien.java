@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author HP
+
  */
 public class NhanVien {
     private String id_Nhanvien; 
