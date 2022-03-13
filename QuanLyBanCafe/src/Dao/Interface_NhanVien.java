@@ -17,5 +17,5 @@ public interface Interface_NhanVien {
     abstract public List<NhanVien> selectAll();
     abstract public NhanVien selectByID(String ID_NhanVien);
     abstract public NhanVien selectByAccout(String accout);
-    abstract public List<NhanhVien> selectBySQL(String sql, Object... agrs);
+    abstract public List<NhanVien> selectBySQL(String sql, Object... agrs);
 }
