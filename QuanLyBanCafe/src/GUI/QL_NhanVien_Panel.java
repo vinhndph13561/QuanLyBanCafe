@@ -134,7 +134,7 @@ public class QL_NhanVien_Panel extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Mã NV", "Họ và tên", "Giới tính", "Ngày sinh", "Giới tính", "Số điện thoại", "Email", "Vai trò"
+                "Mã NV", "Họ và tên", "Giới tính", "Ngày sinh", "Địa chỉ", "Số điện thoại", "Email", "Vai trò"
             }
         ) {
             Class[] types = new Class [] {
@@ -219,7 +219,7 @@ public class QL_NhanVien_Panel extends javax.swing.JPanel {
 
         btnFirst.setBackground(new java.awt.Color(102, 82, 2));
         btnFirst.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        btnFirst.setForeground(new java.awt.Color(219, 147, 7));
+        btnFirst.setForeground(new java.awt.Color(255, 255, 255));
         btnFirst.setText("|<");
         btnFirst.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -229,17 +229,17 @@ public class QL_NhanVien_Panel extends javax.swing.JPanel {
 
         btnPrev.setBackground(new java.awt.Color(102, 82, 2));
         btnPrev.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        btnPrev.setForeground(new java.awt.Color(219, 147, 7));
+        btnPrev.setForeground(new java.awt.Color(255, 255, 255));
         btnPrev.setText("<<");
 
         btnNext.setBackground(new java.awt.Color(102, 82, 2));
         btnNext.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        btnNext.setForeground(new java.awt.Color(219, 147, 7));
+        btnNext.setForeground(new java.awt.Color(255, 255, 255));
         btnNext.setText(">>");
 
         btnLast.setBackground(new java.awt.Color(102, 82, 2));
         btnLast.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        btnLast.setForeground(new java.awt.Color(219, 147, 7));
+        btnLast.setForeground(new java.awt.Color(255, 255, 255));
         btnLast.setText(">|");
 
         txtMaNV.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -352,7 +352,7 @@ public class QL_NhanVien_Panel extends javax.swing.JPanel {
 
         btnClear.setBackground(new java.awt.Color(102, 82, 2));
         btnClear.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnClear.setForeground(new java.awt.Color(219, 147, 7));
+        btnClear.setForeground(new java.awt.Color(255, 255, 255));
         btnClear.setText("Làm mới");
         btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -362,12 +362,12 @@ public class QL_NhanVien_Panel extends javax.swing.JPanel {
 
         btnDelete.setBackground(new java.awt.Color(102, 82, 2));
         btnDelete.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnDelete.setForeground(new java.awt.Color(219, 147, 7));
+        btnDelete.setForeground(new java.awt.Color(255, 255, 255));
         btnDelete.setText("Xóa");
 
         btnEdit.setBackground(new java.awt.Color(102, 82, 2));
         btnEdit.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnEdit.setForeground(new java.awt.Color(219, 147, 7));
+        btnEdit.setForeground(new java.awt.Color(255, 255, 255));
         btnEdit.setText("Sửa");
         btnEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -377,7 +377,7 @@ public class QL_NhanVien_Panel extends javax.swing.JPanel {
 
         btnAdd.setBackground(new java.awt.Color(102, 82, 2));
         btnAdd.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnAdd.setForeground(new java.awt.Color(219, 147, 7));
+        btnAdd.setForeground(new java.awt.Color(255, 255, 255));
         btnAdd.setText("Thêm");
 
         txtNgaySinh.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -424,23 +424,16 @@ public class QL_NhanVien_Panel extends javax.swing.JPanel {
                                                 .addComponent(rdoNu)
                                                 .addGap(0, 0, Short.MAX_VALUE))
                                             .addComponent(txtNgaySinh))))
-                                .addGap(18, 18, 18)
-                                .addGroup(pnlTongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblDiaChi)
-                                    .addComponent(lblTaiKhoan)
-                                    .addComponent(lblMatKhau)
-                                    .addComponent(lblVaiTro)
-                                    .addComponent(lblTrangThai)
-                                    .addComponent(btnAdd))
-                                .addGap(25, 25, 25)
                                 .addGroup(pnlTongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(pnlTongLayout.createSequentialGroup()
-                                        .addComponent(btnEdit)
-                                        .addGap(33, 33, 33)
-                                        .addComponent(btnDelete)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(btnClear))
-                                    .addGroup(pnlTongLayout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addGroup(pnlTongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lblDiaChi)
+                                            .addComponent(lblTaiKhoan)
+                                            .addComponent(lblMatKhau)
+                                            .addComponent(lblVaiTro)
+                                            .addComponent(lblTrangThai))
+                                        .addGap(25, 25, 25)
                                         .addGroup(pnlTongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                             .addComponent(txtTaiKhoan, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
@@ -453,7 +446,16 @@ public class QL_NhanVien_Panel extends javax.swing.JPanel {
                                                 .addGroup(pnlTongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(rdoNghiViec)
                                                     .addComponent(rdoQuanLy))))
-                                        .addGap(0, 0, Short.MAX_VALUE))))
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addGroup(pnlTongLayout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(btnAdd)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btnEdit)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btnDelete)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btnClear))))
                             .addComponent(KeNgang))))
                 .addContainerGap())
         );
