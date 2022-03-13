@@ -14,7 +14,7 @@ import java.util.Date;
 public class NhanVien {
     private String id_Nhanvien; 
     private String TenNV;
-    private boolean gender;
+    private boolean GIOITINH;
     private Date Ngaysinh;
     private String DiaChi;
     private String Email;
@@ -24,6 +24,24 @@ public class NhanVien {
     private boolean VaiTro;
     private boolean TrangThai;
     private String Hinh;
+
+    public NhanVien() {
+    }
+
+    public NhanVien(String id_Nhanvien, String TenNV, boolean GIOITINH, Date Ngaysinh, String DiaChi, String Email, String SDT, String userName, String Pass, boolean VaiTro, boolean TrangThai, String Hinh) {
+        this.id_Nhanvien = id_Nhanvien;
+        this.TenNV = TenNV;
+        this.GIOITINH = GIOITINH;
+        this.Ngaysinh = Ngaysinh;
+        this.DiaChi = DiaChi;
+        this.Email = Email;
+        this.SDT = SDT;
+        this.userName = userName;
+        this.Pass = Pass;
+        this.VaiTro = VaiTro;
+        this.TrangThai = TrangThai;
+        this.Hinh = Hinh;
+    }
 
     public String getId_Nhanvien() {
         return id_Nhanvien;
@@ -41,12 +59,12 @@ public class NhanVien {
         this.TenNV = TenNV;
     }
 
-    public boolean isGender() {
-        return gender;
+    public boolean isGIOITINH() {
+        return GIOITINH;
     }
 
-    public void setGender(boolean gender) {
-        this.gender = gender;
+    public void setGIOITINH(boolean GIOITINH) {
+        this.GIOITINH = GIOITINH;
     }
 
     public Date getNgaysinh() {
@@ -120,4 +138,6 @@ public class NhanVien {
     public void setHinh(String Hinh) {
         this.Hinh = Hinh;
     }
+
+  
 }
