@@ -11,10 +11,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Pham Quoc Huy
- */
+
 public class NhanVienDAO implements InterfaceNhanVien {
 
     String INSERT_SQL = "INSERT dbo.NhanVien VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
@@ -144,4 +141,7 @@ public class NhanVienDAO implements InterfaceNhanVien {
          String sql  = "update NHANVIEN SET Pass = ? where ID_NHANVIEN = ?";
          JDBCHelper.update(sql,pass,idnv);
      }
+       
+       
+       
 }
