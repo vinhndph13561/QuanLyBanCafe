@@ -18,7 +18,7 @@ import java.util.List;
 public class NhanVienDAO implements InterfaceNhanVien {
 
     String INSERT_SQL = "INSERT dbo.NhanVien VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
-    String UPDATE_SQL = "UPDATE NhanVien set TenNV = ?,Gender = ?,Ngaysinh = ?,Diachi = ?,Email = ?,SDT=?, Username = ?,Pass=?,Vaitro = ?,Trangthai = ?,Hinh = ? where ID_Nhanvien = ?";
+    String UPDATE_SQL = "UPDATE NhanVien set TenNV = ?,GIOITINH = ?,Ngaysinh = ?,Diachi = ?,Email = ?,SDT=?, Username = ?,Pass=?,Vaitro = ?,Trangthai = ?,Hinh = ? where ID_Nhanvien = ?";
     String DELETE_SQL = "UPDATE NhanVien set Trangthai = 0 WHERE ID_Nhanvien=?";
     String SELECT_ALL_SQL = "select * from NhanVien ";
     String SELECT_BY_ID_SQL = "select * from NhanVien where ID_Nhanvien = ?";
@@ -30,13 +30,13 @@ public class NhanVienDAO implements InterfaceNhanVien {
 
     @Override
     public void insert(NhanVien Entity) {
-       JDBCHelper.update(INSERT_SQL, Entity.getId_Nhanvien(), Entity.getTenNV(), Entity.isGender(), Entity.getNgaysinh(),
+       JDBCHelper.update(INSERT_SQL, Entity.getId_Nhanvien(), Entity.getTenNV(), Entity.isGIOITINH(), Entity.getNgaysinh(),
                 Entity.getDiaChi(), Entity.getEmail(), Entity.getSDT(), Entity.getUserName(), Entity.getPass(), Entity.isVaiTro(), Entity.isTrangThai(), Entity.getHinh());
     }
 
     @Override
     public void update(NhanVien Entity) {
-        JDBCHelper.update(UPDATE_SQL, Entity.getTenNV(), Entity.isGender(), Entity.getNgaysinh(), Entity.getDiaChi(), Entity.getEmail(),
+        JDBCHelper.update(UPDATE_SQL, Entity.getTenNV(), Entity.isGIOITINH(), Entity.getNgaysinh(), Entity.getDiaChi(), Entity.getEmail(),
                 Entity.getSDT(), Entity.getUserName(),Entity.getPass(), Entity.isVaiTro(), Entity.isTrangThai(), Entity.getHinh(), Entity.getId_Nhanvien());
     }
 
@@ -77,7 +77,7 @@ public class NhanVienDAO implements InterfaceNhanVien {
                 NhanVien Entity = new NhanVien();
                 Entity.setId_Nhanvien(rs.getString("ID_Nhanvien"));
                 Entity.setTenNV(rs.getString("TenNV"));
-                Entity.setGender(rs.getBoolean("Gender"));
+                Entity.setGIOITINH(rs.getBoolean("GIOITINH"));
                 Entity.setNgaysinh(rs.getDate("Ngaysinh"));
                 Entity.setDiaChi(rs.getString("Diachi"));
                 Entity.setEmail(rs.getString("Email"));
