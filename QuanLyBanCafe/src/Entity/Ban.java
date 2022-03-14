@@ -5,10 +5,7 @@
  */
 package Entity;
 
-/**
- *
- * @author vinhn
- */
+
 public class Ban {
     private int ID_Ban, soLuongCho;
     private boolean trangThai,hoatDong;
@@ -54,6 +51,5 @@ public class Ban {
     public void setHoatDong(boolean hoatDong) {
         this.hoatDong = hoatDong;
     }
-    
     
 }
