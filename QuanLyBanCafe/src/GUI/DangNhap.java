@@ -174,6 +174,9 @@ public class DangNhap extends javax.swing.JFrame {
 
     private void btnDangNhapMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDangNhapMouseClicked
       dangNhap();
+        Main main = new Main();
+        main.setVisible(true);
+                
     }//GEN-LAST:event_btnDangNhapMouseClicked
 
     private void lblQUenMatKhauMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblQUenMatKhauMouseClicked
